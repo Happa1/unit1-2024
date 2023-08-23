@@ -28,6 +28,7 @@ salary = int( input("Please enter your salary JPY"))
 print(f"Your position is {position} and salary is {salary}")
 """
 
+
 """first_name=input("Please enter your first name")
 last_name=input("Please enter your last name")
 year=int(input("Please enter your year"))
@@ -48,9 +49,11 @@ x = first_name.title()
 last_name=input("Please enter your last name")
 print(f"{year}.{x}.{last_name}@uwcisak.jp")"""
 
-school_email= input("please input your email")
 
-"""while True:
+# use in and endwith() to vertify email address
+"""
+school_email= input("please input your email")
+    while True:
     if "@" in school_email:
         if school_email.endswith("uwcisak.jp")==True:
             school_email2=school_email
@@ -58,17 +61,15 @@ school_email= input("please input your email")
 
 print(f"{school_email2} is it a uwcisak user")
 """
+
+#use specific letters to vertify email
 import re
-pattern = "^[a-zA-Z0-9_.+-]+\.[a-zA-Z0-9_.+-]+\.[a-zA-Z0-9_.+-]+@uwcisak+\.jp"
+pattern = "^[0-9]+\.[a-zA-Z0-9_.+-]+\.[a-zA-Z0-9_.+-]+@uwcisak+\.jp"
 
 while True:
+    school_email = input("Please input your email: ")
     if re.match(pattern, school_email):
+        print(f"{school_email} is a valid uwcisak user")
         break
-
-print(f"{school_email} is it a uwcisak user")
-
-    # if re.match(pattern, school_email):
-    #     print(f"{school_email} is it a uwcisak user")
-    # else:
-    #     print(f"{school_email} is not a uwcisak user")
-    #
+    else:
+        print("Invalid email. Please enter a valid uwcisak.jp email.")
