@@ -1,4 +1,3 @@
-```.py
 # intro.py
 # Today we will work on easy programming
 
@@ -7,6 +6,7 @@ Today we will use input and output functinos
 aug23
 """
 
+```.py
 my_name = "Manaha Ueda" # this is a string
 my_email = '2025.manaha.ueda@uwcisak.jp'
 is_student = True #this is a boolean True:1 or False:0
