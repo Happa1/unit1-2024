@@ -1,5 +1,6 @@
 #Aug_28
 
+```.py
 """Quiz003"""
 in_protein=str(input("please input alphabet"))
 def DNAtranslator(in_protein: str):
@@ -68,4 +69,6 @@ def mystery_box2(email:str):
 
 test=mystery_box2(email="John.doe@gmail.com")
 print(test)
+
+```
 
