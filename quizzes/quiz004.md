@@ -1,4 +1,6 @@
 # Quiz 004
+![2023  Quizzes (3)](https://github.com/Happa1/unit1-2024/assets/142579414/03077e05-72a5-4f1e-8e81-686ab6632b65)
+
 # 1.flow diagram
 ![Computer Science quiz (3)](https://github.com/Happa1/unit1-2024/assets/142579414/ffb7d04c-7c34-4742-95da-f3339931ec62)
 
