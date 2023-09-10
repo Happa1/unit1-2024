@@ -1,6 +1,8 @@
 # Quiz005
 
 # 1. flow diagram
+![Computer Science quiz (4)](https://github.com/Happa1/unit1-2024/assets/142579414/bba4870b-7ce1-43cc-b7d1-557b469ffc88)
+
 
 # 2.solution
 
@@ -25,4 +27,6 @@ print(case1)
 ```
 
 # 3. proof of work
+<img width="419" alt="Screen Shot 2023-09-10 at 16 42 35" src="https://github.com/Happa1/unit1-2024/assets/142579414/97f08ae0-849b-4c75-af3a-daa2fee9116b">
+
 
