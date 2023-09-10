@@ -1,6 +1,6 @@
 # Quiz1
 # 1.flow diagram
-![Untitled](https://github.com/Happa1/unit1-2024/assets/142579414/59b666ba-a922-40fb-aed6-1df97c0d78b1)
+![Computer Science quiz](https://github.com/Happa1/unit1-2024/assets/142579414/521ae213-f788-4672-995e-ce228d1ce966)
 
 # 2.solution
 ```.py
