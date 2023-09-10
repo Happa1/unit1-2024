@@ -1,3 +1,4 @@
+# Quiz 002
 # 1.flow diagram
 ![Computer Science quiz (1)](https://github.com/Happa1/unit1-2024/assets/142579414/f45fe4ec-41c9-4ccc-855b-d04e14c0f5b2)
 
