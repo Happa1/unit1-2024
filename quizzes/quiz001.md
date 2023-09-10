@@ -1,4 +1,6 @@
 # Quiz1
+ ![Uploading [2023] Quizzes.jpg…]()
+
 # 1.flow diagram
 ![Computer Science quiz](https://github.com/Happa1/unit1-2024/assets/142579414/521ae213-f788-4672-995e-ce228d1ce966)
 
