@@ -1,5 +1,5 @@
 # 1.flow diagram
-![Untitled (1)](https://github.com/Happa1/unit1-2024/assets/142579414/64fd38ec-66cc-4f35-9a81-dc1022f94f46)
+![Computer Science quiz (1)](https://github.com/Happa1/unit1-2024/assets/142579414/f45fe4ec-41c9-4ccc-855b-d04e14c0f5b2)
 
 # 2.solution
 ```,py
@@ -17,18 +17,16 @@ else:
 # quiz002 HL
 A2 = [10, 30, 10, 26]
 B2 = [20, 15, 5, -6]
+output="False"
+count=0
 
-for index in A2 and B2:
-    if index==20:
-        output="True"
-        break
-    else:
-        if A+B == 20:
-            output = "True"
-            break
-        else:
-            output = "False"
-print("For HL Quiz "+output)
+for i in range(len(A2)):
+    if A2[count]==20 or B2[count]==20:
+        output='True'
+    elif A2[count]+B2[count]==20:
+        output = 'True'
+    count+=1
+print(output)
 ```
 
 # 3.proof of work
