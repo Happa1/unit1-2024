@@ -1,4 +1,6 @@
 # Quiz 008
+![2022  Quizzes](https://github.com/Happa1/unit1-2024/assets/142579414/ef7a3370-7589-4c86-b132-2842a2dc129f)
+
 # 1.flowchart
 ![Computer Science quiz (7)](https://github.com/Happa1/unit1-2024/assets/142579414/a425a1ac-0307-462c-a00c-c46e7d71cc46)
 
