@@ -1,9 +1,11 @@
 # 1.flow diagram
-![Untitled (3)](https://github.com/Happa1/unit1-2024/assets/142579414/5a90cadd-4a2c-4f8f-9930-b3c61f5b09d2)
+![Computer Science quiz (2)](https://github.com/Happa1/unit1-2024/assets/142579414/8adbc6bc-2ef2-4399-9731-161876b6b3dc)
+
 
 
 # 2.solution
 ```.py
+# quiz 003
 in_protein=str(input("please input alphabet"))
 def DNAtranslator(in_protein: str):
     out_protein = ''
@@ -22,7 +24,7 @@ def DNAtranslator(in_protein: str):
 out_protein=DNAtranslator(in_protein)
 print(out_protein)
 
-"""Quiz003 HL"""
+# quiz003 HL
 in_protein=str(input("please input alphabet"))
 def DNAtranslator(in_protein: str) ->str:
     out_protein = ''
