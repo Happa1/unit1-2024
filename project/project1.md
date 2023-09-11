@@ -1,6 +1,4 @@
 # Crypto Wallet
-![](22ROOSE-master768.gif)  
-<sub>Illustration for Glenn Harvey</sub>
 
 # Criteria A: Planning
 
@@ -24,6 +22,7 @@ Design statement:
 I will to design and make a ———— for a client who is ———. The ——– will about ———— and is constructed using the software ———. It will take  ———- to make and will be evaluated according to the criteria ———.
 
 ** add a description of your coin and citation **
+Litecoing is a cryptoncurrency created from a fork in the Bitoboin blockchain in 2011. Itwas initially designed to address the developwer's concerns that Bitocoing was becoming too centraly controlled.
 
 Justify the tools/structure of your solution
 
@@ -31,9 +30,9 @@ Justify the tools/structure of your solution
 1. The electronic ledger is a text-based software (Runs in the Terminal).
 2. The electronic ledger display the basic description of the cyrptocurrency selected.
 3. The electronic ledger allows to enter, withdraw and record transactions.
-4.
-5.
-6.
+4. The electronic ledger display the graph of transaction and profit.
+5. The electronic ledger shows the past transaction table.
+6. The electronic ledger 
 
 # Criteria B: Design
 
