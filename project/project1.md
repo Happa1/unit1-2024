@@ -19,20 +19,24 @@ An example of the data stored is
 ## Proposed Solution
 
 Design statement:
-I will to design and make a ———— for a client who is ———. The ——– will about ———— and is constructed using the software ———. It will take  ———- to make and will be evaluated according to the criteria ———.
+I will to design and make a ———— for a client who is Ms.Sato. The ——– will about ———— and is constructed using the software PyCharm. It will take  ———- to make and will be evaluated according to the criteria ———.
 
 ** add a description of your coin and citation **
-Litecoing is a cryptoncurrency created from a fork in the Bitoboin blockchain in 2011. Itwas initially designed to address the developwer's concerns that Bitocoing was becoming too centraly controlled.
+Litecoing is the second-oldest cryptoncurrency created from a fork in the Bitoboin blockchain in 2011 by former Google engineer Charlie Lee. Litecoin was released with 150 pre-mined coins and has a total supply of 84 million coins, and its blockchain generates a new block every 2.5 minutes. A new hashing algorithm allows to reduce over time to preserce the coin's value and faster transaction speeds.
 
+“Litecoin (LTC): What It Is, How It Works, vs. Bitcoin.” Investopedia, 2023, www.investopedia.com/articles/investing/040515/what-litecoin-and-how-does-it-work.asp. Accessed 12 Sept. 2023.
+Napoletano, E. “What Is Litecoin? How Does It Work?” Forbes, 30 Jan. 2023, www.forbes.com/advisor/investing/cryptocurrency/litecoin/. Accessed 12 Sept. 2023.
+
+‌
 Justify the tools/structure of your solution
 
 ## Success Criteria
 1. The electronic ledger is a text-based software (Runs in the Terminal).
 2. The electronic ledger display the basic description of the cyrptocurrency selected.
 3. The electronic ledger allows to enter, withdraw and record transactions.
-4. The electronic ledger display the graph of transaction and profit.
+4. The electronic ledger display profit.
 5. The electronic ledger shows the past transaction table.
-6. The electronic ledger 
+6. The electronic ledger display the graph of transaction and profit.
 
 # Criteria B: Design
 
