@@ -41,6 +41,8 @@ Justify the tools/structure of your solution
 # Criteria B: Design
 
 ## System Diagram
+![Computer Science quiz](https://github.com/Happa1/unit1-2024/assets/142579414/9263bde9-216f-4903-a4c3-f2d900617763)
+Figure1: This is the System Diagram of the project with starts from input by keyboard, and ends with output which dsplayed
 
 ## Flow Diagrams
 
