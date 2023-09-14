@@ -42,10 +42,12 @@ Justify the tools/structure of your solution
 
 ## System Diagram
 ![Computer Science quiz](https://github.com/Happa1/unit1-2024/assets/142579414/9263bde9-216f-4903-a4c3-f2d900617763)
-Figure1: This is the System Diagram of the project with starts from input by keyboard, and ends with output which dsplayed
+**Fig. 3** This is the System Diagram of the project with starts from input by keyboard, and ends with output by screen done 
 
 ## Flow Diagrams
+![IMG_9024 Large](https://github.com/Happa1/unit1-2024/assets/142579414/75ca2911-61da-4ece-8a17-c0245a37eb84)
 
+**Fig. 2** This is the flow diagram for the login system.
 
 ## Record of Tasks
 | Task No | Planned Action        | Planned Outcome                                                                          | Time estimate | Target completion date | Criterion |
@@ -58,26 +60,40 @@ Figure1: This is the System Diagram of the project with starts from input by key
 
 ## Login System
 My client requires a system to protect the private data. I thought about using a login system to accomplish this requirement using a if condition and the open command to work with a csv file. More description of the code....
+
+As you can see in the flow diagram in **Fig 1**, In the first line I am defininf a function called try_login, this function has two inputs of type string, and the output is a boolean representing True if the user logins correctly or false otherwise. This is saved in the variable success. Then in line two...this is your work.
 ```.py
-def simple_login(user:str, password:str)->bool:
-    '''
-    Simple authentication, needs fle user.csv
-    :param user: string
-    :param password: string
-    :return: True/False if user is in database
-    '''
-    with open("user.csv") as file:
-        database = file.readlines()
-    output = False
-    for line in database:
-        line_cleaned = line.strip() #remove \n
-        user_pass = line_cleaned.split(",")
-        if user == user_pass[0] and password == user_pass[1]:
-            output = True
+def try_login(name:str, password:str)->bool:
+    with open('users.scv',mode='r') as f:
+        data = f.readlines()
+
+    success = False
+    for line in data:
+        uname = line.split(',')[0]
+        upass = line.split(',')[1].strip() #strip() remove \n
+        if uname == name and upass==password:
+            success=True
             break
+    return(success)
 
-    return output
+###testing
+attempts = 3
+in_name=input("Enter your username")
+in_pass=input("Enter your password")
+result= try_login(name=in_name, password=in_pass)
+while result== False and attempts > 1:
+    in_name = input("[Error try again] Enter your username")
+    in_pass = input("[Error try again] Enter your password")
+    result = try_login(name=in_name, password=in_pass)
+    attempts -=1
 
+if result == False:
+    print("Sayonara")
+    exit(1) #1 is the code for exit without error
+
+#The program continue here if it does close
+print("Welcome")
+#the test of your program
 
 ```
 
