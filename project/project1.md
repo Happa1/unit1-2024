@@ -48,9 +48,11 @@ Figure1: This is the System Diagram of the project with starts from input by key
 
 
 ## Record of Tasks
-| Task No | Planned Action                                                | Planned Outcome                                                                                                 | Time estimate | Target completion date | Criterion |
-|---------|---------------------------------------------------------------|-----------------------------------------------------------------------------------------------------------------|---------------|------------------------|-----------|
-| 1       | Create system diagram                                         | To have a clear idea of the hardware and software requirements for the proposed solution                        | 10min         | Sep 24                 | B         |
+| Task No | Planned Action        | Planned Outcome                                                                          | Time estimate | Target completion date | Criterion |
+|---------|-----------------------|------------------------------------------------------------------------------------------|---------------|------------------------|-----------|
+| 1       | Create system diagram | To have a clear idea of the hardware and software requirements for the proposed solution | 15min         | Sep 13                 | B         |
+| 2       | Create a login System | To have a flow diagram and the code for the login system                                 | 30min         | Sep14                  | B, C      |
+|         |                       |                                                                                          |               |                        |           |
 
 # Criteria C: Development
 
