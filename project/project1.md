@@ -19,7 +19,7 @@ An example of the data stored is
 ## Proposed Solution
 
 Design statement:
-I will to design and make a electronic ledger for a client who is Ms.Sato. The electronic ledger will about the system which records transaction of cryptocurrency and is constructed using the software PyCharm. It will take 1 month to make and will be evaluated according to the criteria below.
+I will to design and make a electronic ledger for a client who is Ms.Sato. The electronic ledger will about the system which records transaction of cryptocurrency and display clear profit and exchange. It is constructed using the software PyCharm. It will take 3 weeks to make and will be evaluated according to the success criteria below.
 
 ** add a description of your coin and citation **
 Litecoing is the second-oldest cryptoncurrency created from a fork in the Bitoboin blockchain in 2011 by former Google engineer Charlie Lee. Litecoin was released with 150 pre-mined coins and has a total supply of 84 million coins, and its blockchain generates a new block every 2.5 minutes. A new hashing algorithm allows to reduce over time to preserce the coin's value and faster transaction speeds.
@@ -34,13 +34,10 @@ Justify the tools/structure of your solution
 1. The electronic ledger is a text-based software (Runs in the Terminal).
 2. The electronic ledger display the basic description of the cyrptocurrency selected.
 3. The electronic ledger allows to enter, withdraw and record transactions.
-4. The electronic ledger display the exchange of currency (yen and dollars).
-5. The electronic ledger has sign up, log in, and log out system.
-6. The electronic ledger display the menu of function, enter, withdraw, transaction table, graph, log out.
-7. The electronic ledger display profit after user enter or withdraw cryptocurrency.
-8. The electronic ledger shows the past transaction table.
-9. The electronic ledger display the bar chart of transaction and profit.
-10. The electronic ledger display the pie chart depending on the category of expense.
+4. The electronic ledger has sign up, log in, and log out system.
+5. The electronic ledger display the exchange of currency (yen and dollars).
+6. The electronic ledger display profit after user enter or withdraw cryptocurrency.
+7. The electronic ledger display the bar chart of transaction and profit.
 
 # Criteria B: Design
 
@@ -58,7 +55,9 @@ Justify the tools/structure of your solution
 |---------|-----------------------|------------------------------------------------------------------------------------------|---------------|------------------------|-----------|
 | 1       | Create system diagram | To have a clear idea of the hardware and software requirements for the proposed solution | 15min         | Sep 13                 | B         |
 | 2       | Create a login System | To have a flow diagram and the code for the login system                                 | 30min         | Sep14                  | B, C      |
-|         |                       |                                                                                          |               |                        |           |
+| 3       | Create a sucess criteria |                                                                                          |               |                        |           |
+
+## Testing plan
 
 # Criteria C: Development
 
