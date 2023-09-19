@@ -3,7 +3,8 @@
 Fig. 1 prompt of quiz 012
 
 ## 1.flow of chart
-![Uploading Screen Shot 2023-09-19 at 19.37.15.png…]()
+<img width="337" alt="Screen Shot 2023-09-19 at 19 37 48" src="https://github.com/Happa1/unit1-2024/assets/142579414/03848056-1af9-4ee3-b44e-981ee111a6f2">
+
 
 Fig. 2 algorithm flow chart of quiz 012
 
