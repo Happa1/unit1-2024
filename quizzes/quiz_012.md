@@ -1,4 +1,5 @@
 # Quiz012
+![2023  Quizzes](https://github.com/Happa1/unit1-2024/assets/142579414/12026995-bdb8-4757-a7c3-1532eef8b8ad)
 
 Fig. 1 prompt of quiz 012
 
@@ -8,7 +9,7 @@ Fig. 1 prompt of quiz 012
 
 Fig. 2 algorithm flow chart of quiz 012
 
-## 2.solution
+## 2a.solution1
 ```.py
 def mysery (a:int, b:int) -> int:
     output = a * b - (b - a)
@@ -17,8 +18,10 @@ def mysery (a:int, b:int) -> int:
 
 out=mysery(2,6)
 print(out)
+```
 
-
+## 2b.solution2
+```.py
 def mysery (a:int, b:int) -> int:
     output = (a-1) * b +a
 
