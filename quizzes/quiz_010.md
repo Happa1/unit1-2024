@@ -3,12 +3,12 @@
 
 Fig. 1 prompt of quiz 010
 
-## 1.flow of chart
+## 1. flow of chart
 <img width="430" alt="Screen Shot 2023-09-19 at 19 43 11" src="https://github.com/Happa1/unit1-2024/assets/142579414/d874f32c-f572-4fb5-b05b-6a0d67b5b0b8">
 
 Fig. 2 algorithm flow chart of quiz 010
 
-## 2a.solution SL
+## 2a. solution SL
 ```.py
 def bestMonth (month:int):
     days=["We","Th","Fr","Sa","Su","Mo","Tu"]
@@ -29,7 +29,7 @@ out=bestMonth(11)
 print(out)
 ```
 
-## 2b.solution HL
+## 2b. solution HL
 ```.py
 # quiz 010 HL
 def bestMonth (month:int):
@@ -81,10 +81,9 @@ print(out)
 
 ```
 
-## 3.proof of work
+## 3. proof of work
 <img width="353" alt="Screen Shot 2023-09-19 at 19 44 03" src="https://github.com/Happa1/unit1-2024/assets/142579414/141b5d7d-b19f-48da-9eb6-7255ed4e2aed">
+Fig. 3 test of quiz 010 SL
 
-Fig. 4 test of quiz 010 SL
 <img width="465" alt="Screen Shot 2023-09-19 at 19 44 46" src="https://github.com/Happa1/unit1-2024/assets/142579414/fcb23463-6cef-4595-a7f9-b739ecfd17d9">
-
-Fig. 3 test of quiz 010 HL
+Fig. 4 test of quiz 010 HL
