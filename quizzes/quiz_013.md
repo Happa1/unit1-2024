@@ -21,5 +21,5 @@ print(out)
 <img width="650" alt="Screen Shot 2023-09-20 at 9 29 50" src="https://github.com/Happa1/unit1-2024/assets/142579414/18abbfeb-820b-4f6a-b5c8-82d921e5269f">
 Fig. 3 test of quiz 013 with 1st given input
 
-<img width="496" alt="Screen Shot 2023-09-20 at 9 30 30" src="https://github.com/Happa1/unit1-2024/assets/142579414/ca2621d0-0a16-473a-8ea1-f1782efef829">
+<img width="650" alt="Screen Shot 2023-09-20 at 9 30 30" src="https://github.com/Happa1/unit1-2024/assets/142579414/ca2621d0-0a16-473a-8ea1-f1782efef829">
 Fig. 4 test of quiz 013 with 2nd given input
