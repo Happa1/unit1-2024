@@ -1,4 +1,5 @@
 # Quiz011
+<img width="973" alt="Screen Shot 2023-09-23 at 12 54 18" src="https://github.com/Happa1/unit1-2024/assets/142579414/9b60d323-5daf-414a-8187-27a5426e05f8">
 
 Fig. 1 prompt of quiz 011
 
