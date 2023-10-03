@@ -1,5 +1,5 @@
 # Crypto Wallet
-![img.png](img.png)
+![Litecoin_image](https://github.com/Happa1/unit1-2024/assets/142579414/535df8e1-343f-417c-a2eb-12f063ad84b0)
 **Fig.1**
 What is litecoin?| CMC Markets
 
@@ -27,9 +27,6 @@ The electronic ledger will about the system which records transaction of cryptoc
 It is constructed by using the software, "PyCharm" and programming language, Python. It will take 3 weeks to make it and will 
 be evaluated according to the success criteria below.
 
-I decided to use python this time because it is the most common language in programming, so that she can and other developers will be able to improve my program.
-
-
 ## Description of the coin
 Litecoing is the second-oldest cryptoncurrency created from a fork in the Bitoboin blockchain in 2011 by former Google engineer Charlie Lee. Litecoin was released with 150 pre-mined coins and has a total supply of 84 million coins, and its blockchain generates a new block every 2.5 minutes. A new hashing algorithm allows to reduce over time to preserce the coin's value and faster transaction speeds.
 
@@ -37,8 +34,12 @@ Litecoing is the second-oldest cryptoncurrency created from a fork in the Bitobo
 “Litecoin (LTC): What It Is, How It Works, vs. Bitcoin.” Investopedia, 2023, www.investopedia.com/articles/investing/040515/what-litecoin-and-how-does-it-work.asp. Accessed 12 Sept. 2023.
 Napoletano, E. “What Is Litecoin? How Does It Work?” Forbes, 30 Jan. 2023, www.forbes.com/advisor/investing/cryptocurrency/litecoin/. Accessed 12 Sept. 2023.
 
-‌
-Justify the tools/structure of your solution
+## Tools of my solution
+I decided to use python this time because it is the most common language in programming, so that she can understand the code easily and other developers will be able to improve my program in the future. I also used Pycharm to develop this program because it has a good UI and many funtionc to indicate possible error occurs to prevent the code from messing up.
+To accomplish the client's requirements, I imported pands, time, textwrap, datetime, and matplotlib.pyplot libraries, and also used csv file to record user data and transaction data. These libraries allowed me to make advanced program without complicated codes, and csv file makes it easy to create, read, and edit it.
+
+## Structure of my solution
+and I specified those structures in the success criteria below.
 
 ## Success Criteria
 1. The electronic ledger is a text-based software (Runs in the Terminal).
@@ -73,7 +74,7 @@ Justify the tools/structure of your solution
 | 8       | Create balance system                                 | To have a function to calculate the balance from deposit and withdrawal data.                                                    | 10min         | Sep 20                 | C         |
 | 9       | Create validated integer function                     | To have a function to validate integers to prevent the error from occurring.                                                     | 10min         | Sep 20                 | C         |
 | 10      | Create signup system                                  | To have a signup function by using a username and password, and record it in the user cv file.                                   | 20min         | Sep 29                 | C         |
-| 11      | Peer feedback (May, Marina, Agatha, Rocky)            | To get and give feedback each other to improve the project.                                                                      | 20min         | Sep 29                 | C         |
+| 11      | Peer feedback (May, Marina, Agatha, Rocky)            | To get and give feedback each other to improve the project.                                                                      | 20min         | Sep 29                 | A,B       |
 | 12      | Create transaction table                              | To get a data of transaction from CSV data and display it.                                                                       | 30min         | Sep 29                 | C         |
 | 13      | Adjust the width of currency description              | To have a good width of description which fits the display of the computer.                                                      | 10min         | Sep 29                 | C         |
 | 14      | Create mark down transaction table                    | To get a mark down table for transaction history.                                                                                | 10min         | Sep 29                 | C         |
@@ -529,10 +530,4 @@ if menu_option == 6:
             option_bool = False
 ```
 
-
-#The program continue here if it does close
-print("Welcome")
-#the test of your program
-
-```
 
