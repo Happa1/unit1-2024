@@ -55,12 +55,18 @@ I specified those structures in the success criteria below.
 
 ## System Diagram
 ![Computer Science quiz](https://github.com/Happa1/unit1-2024/assets/142579414/9263bde9-216f-4903-a4c3-f2d900617763)
-**Fig. 3** This is the System Diagram of the project with starts from input by keyboard, and ends with output by screen done 
+**Fig. 2** This is the System Diagram of the project with starts from input by keyboard, and ends with output by screen done 
 
 ## Flow Diagrams
-![IMG_9024 Large](https://github.com/Happa1/unit1-2024/assets/142579414/75ca2911-61da-4ece-8a17-c0245a37eb84)
+![Computer Science quiz (1)](https://github.com/Happa1/unit1-2024/assets/142579414/887dacb9-3997-4dcc-9d05-15b9e288494c)
+**Fig. 3** This is the flow diagram for the singup system. This summarizes how the singup system works.
 
-**Fig. 2** This is the flow diagram for the login system.
+![Computer Science quiz (2)](https://github.com/Happa1/unit1-2024/assets/142579414/c9a8b4af-7d4b-47be-be5e-efc1d638854b)
+**Fig. 4** This is the flow diagram for the login system. This summarizes how the login system works.
+
+![Computer Science quiz (3)](https://github.com/Happa1/unit1-2024/assets/142579414/f34b93d3-4d26-4248-9ea5-c1d58f060638)
+**Fig. 5** This is the flow diagram for the deposit system. This summarizes how the deposit system works.
+
 
 ## Record of Tasks
 | Task No | Planned Action                                        | Planned Outcome                                                                                                                  | Time estimate | Target completion date | Criterion |
