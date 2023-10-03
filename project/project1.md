@@ -39,7 +39,8 @@ I decided to use python this time because it is the most common language in prog
 To accomplish the client's requirements, I imported pands, time, textwrap, datetime, and matplotlib.pyplot libraries, and also used csv file to record user data and transaction data. These libraries allowed me to make advanced program without complicated codes, and csv file makes it easy to create, read, and edit it.
 
 ## Structure of my solution
-and I specified those structures in the success criteria below.
+To ensure the security of electronic ledger, I want to create a system of singup, login, and logout. I also want to create function of deposit, withdrawal, balance, transaction table, and chart to make it easier for the client to use electroni ledger and show her transaction visually through table and line graph.
+I specified those structures in the success criteria below.
 
 ## Success Criteria
 1. The electronic ledger is a text-based software (Runs in the Terminal).
