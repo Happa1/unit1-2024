@@ -413,8 +413,10 @@ while currency_exchange not in [1,2,3]:
            input(("[Invalid] Please enter currency exchange again:\n1: USD\n2: JPY\n3: skip this"))
        if currency_exchange == 1:
            exchanged_value = f"$ {balance * ltc_price_usd}"
+           print(exchanged_value)
        elif currency_exchange == 2:
            exchanged_value = f"¥ {balance * ltc_price_jpy}"
+           print(exchanged_value)
        elif currency_exchange ==3:
            option_bool=False
 ```
