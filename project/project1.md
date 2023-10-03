@@ -119,17 +119,20 @@ I specified those structures in the success criteria below.
 
 ## Signup System
 My client requires a system to protect the private data. I thought about using a singup system to accomplish this requrement using if condition and the open command to work with csv file.
-As you can see in the flow diagram in **Fig**, if the client choose a signup option in the home option (home_option==1), I defined function called try_singup, this function has three inputs of type string, and the output is a boolean representing True if the user signups correctly or False otherwise.
-This is saved in the signup_success. 
+
+As you can see in the flow diagram in **Fig3**, if the client choose a signup option in the home option (home_option==1), I defined function called try_singup, this function has three inputs of type string, and the output is a boolean representing True if the user signups correctly or False otherwise.
+This is saved in the signup_success.
+
 Then in line 4, I opened the users.csv file with reading mode, and set data as f.readlines().
 From line 7 to 12, I set a loop to read all lines in user.csv file to ask users to enter new username again if the username they set first has already used by other users.
 In line 8 and 9, I split each line of username as uname and password as upass.
-From line 10-12, I set while loop which functions if username singup_username input is in username in user.csv file.
+From line 10 to 12, I set while loop which functions if username singup_username input is in username in user.csv file.
 If signup_username is in uname, print error message, and ask users to input their new username in line 12.
 From line 14 to 18, I set while loop to show error if the password they enter first is different from the confirmation password.
 In line 15, if signup_password is different from conf_pasword, I print error message, and I ask to enter new password in line 16.
 If sinup_password is the same with conf_password, I break the while loop.
 In line 20,if user correctly singup by using username and pass word, I make singup_success True.
+
 In line 22, if singup_success is True, I set variable line_signup, which username and password they set will be record in line splitting by comma in line23.
 Then in line 24, I opened the users.csv file as adding mode, and record line_singup.
 Then from line 27 to36, I'll make a default user csv file for each user to record their transaction.
@@ -140,9 +143,11 @@ In line 30, I set variable category as "-----".
 In line 31, I set variable amount as 0 because there is no transaction happened.
 In line 32, I set variable balance as 0 because there is no transaction happened yet.
 In line 33, I set variable line_atm_2, which combines five variables that I set above as one line, splitting by comma.
+
 In line 34, I open new csv file which use singup_username for the name of the file, and as writing mode.
 In line 35, I connect all values in line_atm_1 by comma, and record each value as colum of atm csv file.
 In line 36, I record line_atm_2.
+
 If all of these signup process done by successfully, it shows the message in red color in line 38.
 In line 40, return singup_success as True, if the user can signup successfully, and end try_signup function.
 In line 42 to 44, I ask user to enter username, password, and confirmation password, and put those three inputs in the variable of signup and start try_signup function in line 45.
