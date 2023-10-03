@@ -213,7 +213,7 @@ if home_option == 1: # Sign up
 
 ## Login System
 My client requires a system to protect her private data, so I set sign up function as I mentioned above. Since, we have a signup function, I thought creating login system to utilize that username and password effectively to secure a client's account.
-As you can see in the flow diagram **Fig**, if the client choose a login option in the home option (home_option==2), I defined function called try_login, this function has two inputs of type string, and the output is a boolean representing True if the user logins correctly or False otherwise.
+As you can see in the flow diagram **Fig4**, if the client choose a login option in the home option (home_option==2), I defined function called try_login, this function has two inputs of type string, and the output is a boolean representing True if the user logins correctly or False otherwise.
 This is saved in Login.
 Then in line 3, I opened users.csv file as reading mode, and set vriable data as readlines().
 In line 6, I set Login as False.
@@ -265,7 +265,7 @@ if home_option==2: #Login
 
 ## Deposit System
 My client requires a system to record deposit of cryptocurrency transaction easily. I thought about using a deposit system to accomplish this, using a csv file.
-As you can see the flow diagram from **Fig**, if the user choose the option deposit after she login (menu_option==1)
+As you can see the flow diagram from **Fig5**, if the user choose the option deposit after she login (menu_option==1)
 In line 2, I set variable date, to define today's date by using imported datetime.
 In line 3, I ask user to enter the description of deposit to record the purpose of deposit.
 In line 4, I set variable category, as deposit.
@@ -297,7 +297,7 @@ if menu_option == 1:  # Deposit
 
 ## Withdrawal System
 My client requires a system to record withdrawal of cryptocurrency transaction easily. I thought about using a withdrawal system to accomplish this, using a csv file.
-As you can see the flow diagram from **Fig**, if the user choose the option withdrawal after she login (menu_option==2).
+If the user choose the option withdrawal after she login (menu_option==2).
 In line 2, I set variable date, to define today's date by using imported datetime.
 In line 3, I ask user to enter the description of withdrawal to record the purpose of deposit.
 In line 4, I set variable category, as deposit.
