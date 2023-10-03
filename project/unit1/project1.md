@@ -458,10 +458,10 @@ if menu_option == 3:  # calculate balance
 ## Transaction table System
 My client requires to record and show her deposit and withdrawal data with clear visual. I thought creating transaction table shown in markdown style by using atm csv file which records user's deposit and withdrawal data.
 If user choose menu of transaction table (menu_option == 4), the program start the session of transaction table, in line 1.
-I call user's atm csv file in line 2, and print the data in the csv file in markdown style without index.
+I call user's atm csv file in line 2 by removing the second row of the table which is the default input, and print the data in the csv file in markdown style without index in line 3.
 ```.py
 if menu_option ==4: #Transaction table
-    df = pd.read_csv(f'atm{username}.csv')
+    df = pd.read_csv(f'atm{username}.csv', skiprows=[1])
     print(df.to_markdown(index=False))
 ```
 
