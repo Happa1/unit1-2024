@@ -54,8 +54,8 @@ I specified those structures in the success criteria below.
 # Criteria B: Design
 
 ## System Diagram
-![Computer Science quiz](https://github.com/Happa1/unit1-2024/assets/142579414/9263bde9-216f-4903-a4c3-f2d900617763)
-**Fig. 2** This is the System Diagram of the project with starts from input by keyboard, and ends with output by screen done 
+![Computer Science quiz (4)](https://github.com/Happa1/unit1-2024/assets/142579414/cc52062e-6ac4-4541-8b2b-44914819d82e)
+**Fig. 2** This is the System Diagram of the project with starts from input by keyboard, and ends with output by display of the computer. I developed my project in wallet.py file with user.csv file and user's own atm csv files in pycharm. I also import the LTC echange rate data from the Internet, the citation is listed below.
 
 ## Flow Diagrams
 ![Computer Science quiz (1)](https://github.com/Happa1/unit1-2024/assets/142579414/887dacb9-3997-4dcc-9d05-15b9e288494c)
@@ -352,7 +352,6 @@ You can see the same structure for getting LTC price in Japanese yen in line 21 
 “Crypto API Documentation | CoinGecko.” CoinGecko, CoinGecko, 2023, www.coingecko.com/ja/api/documentation. Accessed 3 Oct. 2023.
 
 ‌
-
 The functions above was stored in my_lib.py to make my main paython code concise, therefore I called the functions to my main python code, wallet.py, in line 39.
 After the user done with deposit or withdrawal, ask the user to choose in which currency unit they want to see their LTC value in line 44, and set the option number as variable currency_exchange and call validate_int function to check it is valid number.
 If user enter the number except 1, 2, and 3, the user will be asked again to enter the option number in line 44 and 45.
@@ -542,4 +541,8 @@ if menu_option == 6:
             option_bool = False
 ```
 
+## Citations
+1. “Litecoin (LTC): What It Is, How It Works, vs. Bitcoin.” Investopedia, 2023, www.investopedia.com/articles/investing/040515/what-litecoin-and-how-does-it-work.asp. Accessed 12 Sept. 2023.
+Napoletano, E. “What Is Litecoin? How Does It Work?” Forbes, 30 Jan. 2023, www.forbes.com/advisor/investing/cryptocurrency/litecoin/. Accessed 12 Sept. 2023.
 
+2. “Crypto API Documentation | CoinGecko.” CoinGecko, CoinGecko, 2023, www.coingecko.com/ja/api/documentation. Accessed 3 Oct. 2023.
