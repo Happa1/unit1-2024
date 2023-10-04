@@ -37,8 +37,17 @@ Litecoing is the second-oldest cryptoncurrency created from a fork in the Bitobo
 Napoletano, E. “What Is Litecoin? How Does It Work?” Forbes, 30 Jan. 2023, www.forbes.com/advisor/investing/cryptocurrency/litecoin/. Accessed 12 Sept. 2023.
 
 ## Tools of my solution
-I decided to use python this time because it is the most common language in programming, so that she can understand the code easily and other developers will be able to improve my program in the future. I also used Pycharm to develop this program because it has a good UI and many funtionc to indicate possible error occurs to prevent the code from messing up.
+I decided to use python this time because it is the most common language in programming, so that she can understand the code easily and other developers will be able to improve my program in the future. I also used Pycharm to develop this program because it has a good UI and many funtion to indicate possible error occurs to prevent the code from messing up.
 To accomplish the client's requirements, I imported pands, time, textwrap, datetime, and matplotlib.pyplot libraries, and also used csv file to record user data and transaction data. These libraries allowed me to make advanced program without complicated codes, and csv file makes it easy to create, read, and edit it.
+**citation**
+upGrad. “Top 12 Commerce Project Topics & Ideas in 2023 [for Freshers].” UpGrad Blog, upGrad Education, 28 Sept. 2022, www.upgrad.com/blog/reasons-why-python-popular-with-developers/. Accessed 4 Oct. 2023.
+
+‌“Is Python Good for Software Development? - BairesDev Blog: Insights on Software Development & Tech Talent.” BairesDev Blog: Insights on Software Development & Tech Talent, 22 June 2022, www.bairesdev.com/blog/is-python-good-for-software-development/. Accessed 4 Oct. 2023.
+
+‌alexandre. “PyCharm: All about the Most Popular Python IDE.” Data Science Courses | DataScientest, 20 Feb. 2023, datascientest.com/en/pycharm-all-about-the-most-popular-python-ide#:~:text=The%20main%20advantages%20of%20PyCharm,error%20highlighting%20improves%20the%20process. Accessed 4 Oct. 2023.
+
+Simpson, Scott. “Why Use a Database? - Programming Foundations: Databases.” LinkedIn, 28 Mar. 2019, www.linkedin.com/learning/programming-foundations-databases-2/why-use-a-database#:~:text=%2D%20Databases%20let%20us%20work%20with,they%20help%20us%20avoid%20redundancy. Accessed 4 Oct. 2023.
+
 
 ## Structure of my solution
 To ensure the security of electronic ledger, I want to create a system of singup, login, and logout. I also want to create function of deposit, withdrawal, balance, transaction table, and chart to make it easier for the client to use electroni ledger and show her transaction visually through table and line graph.
@@ -47,11 +56,11 @@ I specified those structures in the success criteria below.
 ## Success Criteria
 1. The electronic ledger is a text-based software (Runs in the Terminal).
 2. The electronic ledger display the basic description of the cyrptocurrency selected.
-3. The electronic ledger allows to enter, withdraw and record transactions.
-4. The electronic ledger has sign up, log in, and log out system.
-5. The electronic ledger display the exchange of currency (yen and dollars).
-6. The electronic ledger display profit after user enter or withdraw cryptocurrency.
-7. The electronic ledger display the line graph of transaction and profit.
+3. The electronic ledger has sign up, log in, and log out system.
+5. The electronic ledger allows to enter, withdraw and record transactions.
+6. The electronic ledger display the exchange of currency (yen and dollars).
+7. The electronic ledger display profit after user enter or withdraw cryptocurrency.
+8. The electronic ledger display the line graph of transaction and profit.
 
 # Criteria B: Design
 
@@ -119,7 +128,7 @@ I specified those structures in the success criteria below.
 
 # Criteria C: Development
 
-## Signup System
+## Signup System (Success Criteria 3)
 My client requires a system to protect the private data. I thought about using a singup system to accomplish this requrement using if condition, for loop, while loop and the open command to work with csv file.
 
 As you can see in the flow diagram in **Fig3**, if the client choose a signup option in the home option (home_option==1), I defined function called try_singup, this function has three inputs of type string, and the output is a boolean representing True if the user signups correctly or False otherwise.
@@ -218,64 +227,7 @@ After signup session ends, it moves to the home questions which asks user to cho
         home_option = validate_int(msg="[Error] Please choose one, and enter the number: ", menu='', type='option')
 ```
 
-Full code of signup system
-```.py
-if home_option == 1: # Sign up
-    def try_signup(signup_username:str, signup_password:str, conf_password:str)->bool:
-        signup_success=False
-        with open('users.csv', mode='r') as f:
-            data = f.readlines()
-
-        for line in data:
-            uname = line.split(',')[0]
-            upass = line.split(',')[1].strip()  # strip() remove \n
-            while signup_username in uname:
-                print("Your username is invalid")
-                signup_username = input("Please enter your new username: ")
-
-        while signup_password != conf_password:
-            print("The password dosen't match, please enter the password again: ")
-            conf_password = input("[Error] Enter your password again: ")
-            if signup_password==conf_password:
-                break
-
-        signup_success = True
-
-        if signup_success == True:
-            line_signup = f"{signup_username},{signup_password}\n"
-            with open('users.csv', mode='a') as f:
-                data = f.writelines(line_signup)
-
-            line_atm_1 = ["Date", "Description", "Category", "Amount", "Balance"]
-            date = datetime.date.today()  # today's date
-            description = "-----"
-            category = "-----"
-            amount = 0
-            balance = 0
-            line_atm_2 = f"{date},{description},{category},{amount},{balance}\n"
-            with open(f'atm{signup_username}.csv', mode='w') as f:
-                f.writelines(','.join(line_atm_1) + '\n')
-                f.writelines(line_atm_2)
-
-        print( f"{red}You are successfully sign upped!{c_end}")
-
-        return(signup_success)
-
-    in_signup_username = input("Enter your username: ")
-    in_signup_password = input("Enter your password: ")
-    in_conf_password = input("[Confirmation]Enter your password again: ")
-    signup=try_signup(signup_username=in_signup_username,signup_password=in_signup_password,conf_password=in_conf_password)
-    username = in_signup_username
-    # print(signup)
-
-    print(f"1:Sign up\n2:Login")
-    username = ''
-    home_option = validate_int(msg="Please choose one, and enter the number: ", menu='', type='option')
-    while not home_option in [1, 2]:
-        home_option = validate_int(msg="[Error] Please choose one, and enter the number: ", menu='', type='option')
-```
-
-## Login System
+## Login System  (Success Criteria 3)
 My client requires a system to protect her private data, so I set sign up function as I mentioned above. Since, we have a signup function, I thought creating login system to utilize that username and password effectively to secure a client's account by using if condition, for loop, while loop, and opne command csv file.
 
 As you can see in the flow diagram **Fig4**, if the client choose a login option in the home option (home_option==2), I defined function called try_login, this function has two inputs of type string, and the output is a boolean representing True if the user logins correctly or False otherwise.
@@ -331,42 +283,41 @@ In line 30, I set variable username as in_name, which is username that the user 
     username = in_name
 ```
 
-Full code of login system
+## Cryptocurrency description (Success Criteria 2)
+My client requires a description of the cryptocurrency she buy and sell. I thought about researching on the Internet about LTC, and show the description nicely by using, textwrap library tp adjust the length of the sentences in the screen.
+
+In line 1, I set variable description_LTC, and put the description of crypto currency the client uses which is refering the information on the interenet.
+In line 2, I set variable description_LTC2, and put "citation" with green color.
+In line 3, I set variable description_LTC3, and put first citation.
+In line 4, I set variabel description_LTC4, and put second citation.
+From line 5 to 8, I set variable, description_LTC_wrap_list, description_LTC_wrap_list3, and description_LTC_wrap_list4 which cut letters if the letter in one line hits length of 100.
+From line 9 to 12, I diplay description_LTC_wrap_list, description_LTC2, description_LTC_wrap_list3, and description_LTC_wrap_list4, by connecting cut letters with newline (\n).
+
 ```.py
-if home_option==2: #Login
-    def try_login(name:str, password:str)->bool:
-        with open('users.csv', mode='r') as f:
-            data = f.readlines()
-
-        Login = False
-        for line in data:
-            uname = line.split(',')[0]
-            upass = line.split(',')[1].strip() #strip() remove \n
-            if uname == name and upass==password:
-                Login=True
-                break
-        return(Login)
-
-    ###testing
-    attempts = 3
-    in_name=input("Enter your username: ")
-    in_pass=input("Enter your password: ")
-    result= try_login(name=in_name, password=in_pass)
-    while result== False and attempts > 1:
-        in_name = input("[Error try again] Enter your username: ")
-        in_pass = input("[Error try again] Enter your password: ")
-        result = try_login(name=in_name, password=in_pass)
-        attempts -=1
-
-    if result == False:
-        print("Sayonara")
-        exit(1) #1 is the code for exit without error
-
-    username = in_name
-
+description_LTC=("Litecoing is the second-oldest cryptoncurrency created "
+                 "from a fork in the Bitoboin blockchain in 2011 by former "
+                 "Google engineer Charlie Lee. Litecoin was released with "
+                 "150 pre-mined coins and has a total supply of 84 million coins, "
+                 "and its blockchain generates a new block every 2.5 minutes. "
+                 "A new hashing algorithm allows to reduce over time to preserce "
+                 "the coin's value and faster transaction speeds.\n")
+description_LTC2=(f"{green}***Citation***{c_end}")
+description_LTC3=("“Litecoin (LTC): What It Is, How It Works, vs. Bitcoin.” Investopedia, 2023,"
+                 " www.investopedia.com/articles/investing/040515/what-litecoin-and-how-does-it-work.asp."
+                 " Accessed 12 Sept. 2023. Napoletano, E.\n")
+description_LTC4=("“What Is Litecoin? How Does It Work?” Forbes, 30 Jan. 2023, www.forbes.com/"
+                 "advisor/investing/"
+                 "cryptocurrency/litecoin/. Accessed 12 Sept. 2023.")
+description_LTC_wrap_list = textwrap.wrap(description_LTC, 100)
+description_LTC_wrap_list3=textwrap.wrap(description_LTC3,100)
+description_LTC_wrap_list4=textwrap.wrap(description_LTC4,100)
+print('\n'.join(description_LTC_wrap_list)+"\n")
+print(description_LTC2+"\n")
+print('\n'.join(description_LTC_wrap_list3)+"\n")
+print('\n'.join(description_LTC_wrap_list4)+"\n")
 ```
 
-## Deposit System
+## Deposit System  (Success Criteria 4)
 My client requires a system to record deposit of cryptocurrency transaction easily. I thought about using a deposit system to accomplish this, using a csv file.
 As you can see the flow diagram from **Fig5**, if the user choose the option deposit after she login (menu_option==1)
 In line 2, I set variable date, to define today's date by using imported datetime.
@@ -398,7 +349,7 @@ if menu_option == 1:  # Deposit
         time.sleep(1)
 ```
 
-## Withdrawal System
+## Withdrawal System (Success Criteria 4)
 My client requires a system to record withdrawal of cryptocurrency transaction easily. I thought about using a withdrawal system to accomplish this, using if condition and open command csv file.
 
 If the user choose the option withdrawal after she login (menu_option==2).
@@ -431,7 +382,7 @@ In line 14, I print the balance by using balance variable to inform the user her
         time.sleep(1)
 ```
 
-## Debt classification System
+## Debt classification System (Success Criteria 6)
 My client requires a system to know her balance is whether in black or not after she deposits or withdrawals money. I thought creating debt classification system by using balance variable and if condition which are suitable to accomplish this requirement.
 
 I use the variable balance and display "You're not debt", and if the balance is below 0, display "You're debt".
@@ -442,7 +393,7 @@ else:
     print("You're debt")
 ```
 
-## Exchange currency System
+## Exchange currency System (Success Criteria 5)
 My client requires exchange currency system to know how much value she has as a cryptocurrency in a real money value. I thought about using exchange currency system by using function with is getting LTC price data in dollar and yen via url api and if condition.
 
 I called the function get_ltc_price_usd that gets the rate of LTC coin by using CoinGecko api in dollar.
@@ -584,7 +535,7 @@ while currency_exchange not in [1,2,3]:
            option_bool=False
 ```
 
-## Balance System
+## Balance System (Success Criteria 6)
 My client requires the system to know the balance of her account. I thought creating balance calculation function by using open command csv file to calculate the balance.
 
 Import pandas as pd to read to call csv file in line 1.
@@ -619,7 +570,7 @@ if menu_option == 3:  # calculate balance
     print(banner_maker(msg=msg, space=50, symbol='$'))
 ```
 
-## Transaction table System
+## Transaction table System (Success Criteria 4)
 My client requires to record and show her deposit and withdrawal data with clear visual. I thought creating transaction table shown in markdown style by using open command atm csv file which records user's deposit and withdrawal data.
 
 If user choose menu of transaction table (menu_option == 4), the program start the session of transaction table, in line 1.
@@ -630,7 +581,7 @@ if menu_option ==4: #Transaction table
     print(df.to_markdown(index=False))
 ```
 
-## Chart System
+## Chart System (Success Criteria 7)
 My client requires a system to see her transaction history visually easy to understandable. I thought creating line graph to show user's deposit, withdrawal, and balance history by using open command user's atm csv file and matplotlib.pyplot library.
 
 In line 1, I imported matplotlib.pyplot as plt to import library to draw graph.
@@ -697,54 +648,7 @@ elif category_choice==2: #withdrawal
         plt.show()
 ```
 
-Full code of chart system
-```.py
-import matplotlib.pyplot as plt
-import pandas as pd
-if menu_option ==5:
-    df = pd.read_csv(f'atm{username}.csv')
-    category_choice=validate_int(msg="1: Deposit\n2: Withdrawal\n3: Balance\nChoose the category that you want to see graph: ",menu='',type="category")
-    while category_choice not in [1,2,3]:
-        category_choice = validate_int(msg="[Invalid] Please enter category again\n1: Deposit\n2: Withdrawal\n3: Balance: ", menu="", type="category")
-    if category_choice==1: #deposit
-        dfr = df[df["Category"] == "deposit"]
-        x_axis = dfr.Date
-        y_axis = dfr.Amount
-        plt.ylim(0, max(y_axis))
-        plt.title("Deposit History")
-        plt.legend("Deposit")
-        plt.xlabel("Date")
-        plt.ylabel("Amount")
-        plt.ylim(0, max(y_axis))
-        plt.plot(x_axis, y_axis)
-        plt.xticks(rotation=30)
-        plt.show()
-    elif category_choice==2: #withdrawal
-        dfr = df[df["Category"] == "withdrawal"]
-        x_axis = dfr.Date
-        y_axis = dfr.Amount
-        plt.ylim(0, max(y_axis))
-        plt.title("Withdrawal History")
-        plt.legend("Withdrawal")
-        plt.xlabel("Date")
-        plt.ylabel("Amount")
-        plt.plot(x_axis, y_axis)
-        plt.xticks(rotation=30)
-        plt.show()
-    elif category_choice==3:#Balance
-        dfr = df["Balance"]
-        x_axis = dfr.Date
-        y_axis = dfr.Amount
-        plt.title("Balance History")
-        plt.legend("Balance")
-        plt.xlabel("Date")
-        plt.ylabel("Amount")
-        plt.plot(x_axis, y_axis)
-        plt.xticks(rotation=30)
-        plt.show()
-```
-
-## Logout System
+## Logout System  (Success Criteria 3)
 My client requires to log out from her bank ledger to protect her account. I thought creating logout system which ends the program without error by using if condition and exit code to accomplish client's requirements.
 
 If user choose logout (menu_option == 6), I ask user that you want to log out and answer in yYnN in line 1 and 2.
@@ -770,8 +674,10 @@ https://youtu.be/muYBfP_1LRE
 
 
 ## Citations
-1. “Litecoin (LTC): What It Is, How It Works, vs. Bitcoin.” Investopedia, 2023, www.investopedia.com/articles/investing/040515/what-litecoin-and-how-does-it-work.asp. Accessed 12 Sept. 2023.
-   
-3. Napoletano, E. “What Is Litecoin? How Does It Work?” Forbes, 30 Jan. 2023, www.forbes.com/advisor/investing/cryptocurrency/litecoin/. Accessed 12 Sept. 2023.
-   
-5. “Crypto API Documentation | CoinGecko.” CoinGecko, CoinGecko, 2023, www.coingecko.com/ja/api/documentation. Accessed 3 Oct. 2023.
+1. upGrad. “Top 12 Commerce Project Topics & Ideas in 2023 [for Freshers].” UpGrad Blog, upGrad Education, 28 Sept. 2022, www.upgrad.com/blog/reasons-why-python-popular-with-developers/. Accessed 4 Oct. 2023.
+2. ‌“Is Python Good for Software Development? - BairesDev Blog: Insights on Software Development & Tech Talent.” BairesDev Blog: Insights on Software Development & Tech Talent, 22 June 2022, www.bairesdev.com/blog/is-python-good-for-software-development/. Accessed 4 Oct. 2023.
+3. alexandre. “PyCharm: All about the Most Popular Python IDE.” Data Science Courses | DataScientest, 20 Feb. 2023, datascientest.com/en/pycharm-all-about-the-most-popular-python-ide#:~:text=The%20main%20advantages%20of%20PyCharm,error%20highlighting%20improves%20the%20process. Accessed 4 Oct. 2023.
+4. Simpson, Scott. “Why Use a Database? - Programming Foundations: Databases.” LinkedIn, 28 Mar. 2019, www.linkedin.com/learning/programming-foundations-databases-2/why-use-a-database#:~:text=%2D%20Databases%20let%20us%20work%20with,they%20help%20us%20avoid%20redundancy. Accessed 4 Oct. 2023.
+5. Napoletano, E. “What Is Litecoin? How Does It Work?” Forbes, 30 Jan. 2023, www.forbes.com/advisor/investing/cryptocurrency/litecoin/. Accessed 12 Sept. 2023.
+6. “Litecoin (LTC): What It Is, How It Works, vs. Bitcoin.” Investopedia, 2023, www.investopedia.com/articles/investing/040515/what-litecoin-and-how-does-it-work.asp. Accessed 12 Sept. 2023.
+7. “Crypto API Documentation | CoinGecko.” CoinGecko, CoinGecko, 2023, www.coingecko.com/ja/api/documentation. Accessed 3 Oct. 2023.
