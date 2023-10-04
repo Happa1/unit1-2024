@@ -218,7 +218,7 @@ After signup session ends, it moves to the home questions which asks user to cho
         home_option = validate_int(msg="[Error] Please choose one, and enter the number: ", menu='', type='option')
 ```
 
-
+Full code of signup system
 ```.py
 if home_option == 1: # Sign up
     def try_signup(signup_username:str, signup_password:str, conf_password:str)->bool:
@@ -331,6 +331,7 @@ In line 30, I set variable username as in_name, which is username that the user 
     username = in_name
 ```
 
+Full code of login system
 ```.py
 if home_option==2: #Login
     def try_login(name:str, password:str)->bool:
@@ -522,7 +523,7 @@ while currency_exchange not in [1,2,3]:
            option_bool=False
 ```
 
-
+Full code of exchange currency system
 ```.py
 ```my_lib.py```
 # get LTC data in dollar
@@ -696,6 +697,7 @@ elif category_choice==2: #withdrawal
         plt.show()
 ```
 
+Full code of chart system
 ```.py
 import matplotlib.pyplot as plt
 import pandas as pd
