@@ -39,6 +39,7 @@ Napoletano, E. “What Is Litecoin? How Does It Work?” Forbes, 30 Jan. 2023, w
 ## Tools of my solution
 I decided to use python this time because it is the most common language in programming, so that she can understand the code easily and other developers will be able to improve my program in the future. I also used Pycharm to develop this program because it has a good UI and many funtion to indicate possible error occurs to prevent the code from messing up.
 To accomplish the client's requirements, I imported pands, time, textwrap, datetime, and matplotlib.pyplot libraries, and also used csv file to record user data and transaction data. These libraries allowed me to make advanced program without complicated codes, and csv file makes it easy to create, read, and edit it.
+
 **citation**
 upGrad. “Top 12 Commerce Project Topics & Ideas in 2023 [for Freshers].” UpGrad Blog, upGrad Education, 28 Sept. 2022, www.upgrad.com/blog/reasons-why-python-popular-with-developers/. Accessed 4 Oct. 2023.
 
