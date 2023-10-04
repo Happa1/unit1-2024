@@ -543,10 +543,13 @@ if menu_option == 6:
             time.sleep(2)
             option_bool = False
 ```
+## Video of my project
+https://youtu.be/xde2U8POyO0
+
 
 ## Citations
 1. “Litecoin (LTC): What It Is, How It Works, vs. Bitcoin.” Investopedia, 2023, www.investopedia.com/articles/investing/040515/what-litecoin-and-how-does-it-work.asp. Accessed 12 Sept. 2023.
-
-2.Napoletano, E. “What Is Litecoin? How Does It Work?” Forbes, 30 Jan. 2023, www.forbes.com/advisor/investing/cryptocurrency/litecoin/. Accessed 12 Sept. 2023.
-
-3. “Crypto API Documentation | CoinGecko.” CoinGecko, CoinGecko, 2023, www.coingecko.com/ja/api/documentation. Accessed 3 Oct. 2023.
+   
+3. Napoletano, E. “What Is Litecoin? How Does It Work?” Forbes, 30 Jan. 2023, www.forbes.com/advisor/investing/cryptocurrency/litecoin/. Accessed 12 Sept. 2023.
+   
+5. “Crypto API Documentation | CoinGecko.” CoinGecko, CoinGecko, 2023, www.coingecko.com/ja/api/documentation. Accessed 3 Oct. 2023.
