@@ -40,7 +40,8 @@ Napoletano, E. “What Is Litecoin? How Does It Work?” Forbes, 30 Jan. 2023, w
 I decided to use python this time because it is the most common language in programming, so that she can understand the code easily and other developers will be able to improve my program in the future. I also used Pycharm to develop this program because it has a good UI and many funtion to indicate possible error occurs to prevent the code from messing up.
 To accomplish the client's requirements, I imported pands, time, textwrap, datetime, and matplotlib.pyplot libraries, and also used csv file to record user data and transaction data. These libraries allowed me to make advanced program without complicated codes, and csv file makes it easy to create, read, and edit it.
 
-**citation**
+**Citation**
+
 upGrad. “Top 12 Commerce Project Topics & Ideas in 2023 [for Freshers].” UpGrad Blog, upGrad Education, 28 Sept. 2022, www.upgrad.com/blog/reasons-why-python-popular-with-developers/. Accessed 4 Oct. 2023.
 
 ‌“Is Python Good for Software Development? - BairesDev Blog: Insights on Software Development & Tech Talent.” BairesDev Blog: Insights on Software Development & Tech Talent, 22 June 2022, www.bairesdev.com/blog/is-python-good-for-software-development/. Accessed 4 Oct. 2023.
@@ -675,10 +676,10 @@ https://youtu.be/muYBfP_1LRE
 
 
 ## Citations
-1. upGrad. “Top 12 Commerce Project Topics & Ideas in 2023 [for Freshers].” UpGrad Blog, upGrad Education, 28 Sept. 2022, www.upgrad.com/blog/reasons-why-python-popular-with-developers/. Accessed 4 Oct. 2023.
-2. ‌“Is Python Good for Software Development? - BairesDev Blog: Insights on Software Development & Tech Talent.” BairesDev Blog: Insights on Software Development & Tech Talent, 22 June 2022, www.bairesdev.com/blog/is-python-good-for-software-development/. Accessed 4 Oct. 2023.
-3. alexandre. “PyCharm: All about the Most Popular Python IDE.” Data Science Courses | DataScientest, 20 Feb. 2023, datascientest.com/en/pycharm-all-about-the-most-popular-python-ide#:~:text=The%20main%20advantages%20of%20PyCharm,error%20highlighting%20improves%20the%20process. Accessed 4 Oct. 2023.
-4. Simpson, Scott. “Why Use a Database? - Programming Foundations: Databases.” LinkedIn, 28 Mar. 2019, www.linkedin.com/learning/programming-foundations-databases-2/why-use-a-database#:~:text=%2D%20Databases%20let%20us%20work%20with,they%20help%20us%20avoid%20redundancy. Accessed 4 Oct. 2023.
-5. Napoletano, E. “What Is Litecoin? How Does It Work?” Forbes, 30 Jan. 2023, www.forbes.com/advisor/investing/cryptocurrency/litecoin/. Accessed 12 Sept. 2023.
-6. “Litecoin (LTC): What It Is, How It Works, vs. Bitcoin.” Investopedia, 2023, www.investopedia.com/articles/investing/040515/what-litecoin-and-how-does-it-work.asp. Accessed 12 Sept. 2023.
+1. Napoletano, E. “What Is Litecoin? How Does It Work?” Forbes, 30 Jan. 2023, www.forbes.com/advisor/investing/cryptocurrency/litecoin/. Accessed 12 Sept. 2023.
+2. “Litecoin (LTC): What It Is, How It Works, vs. Bitcoin.” Investopedia, 2023, www.investopedia.com/articles/investing/040515/what-litecoin-and-how-does-it-work.asp. Accessed 12 Sept. 2023.
+3. upGrad. “Top 12 Commerce Project Topics & Ideas in 2023 [for Freshers].” UpGrad Blog, upGrad Education, 28 Sept. 2022, www.upgrad.com/blog/reasons-why-python-popular-with-developers/. Accessed 4 Oct. 2023.
+4. ‌“Is Python Good for Software Development? - BairesDev Blog: Insights on Software Development & Tech Talent.” BairesDev Blog: Insights on Software Development & Tech Talent, 22 June 2022, www.bairesdev.com/blog/is-python-good-for-software-development/. Accessed 4 Oct. 2023.
+5. alexandre. “PyCharm: All about the Most Popular Python IDE.” Data Science Courses | DataScientest, 20 Feb. 2023, datascientest.com/en/pycharm-all-about-the-most-popular-python-ide#:~:text=The%20main%20advantages%20of%20PyCharm,error%20highlighting%20improves%20the%20process. Accessed 4 Oct. 2023.
+6. Simpson, Scott. “Why Use a Database? - Programming Foundations: Databases.” LinkedIn, 28 Mar. 2019, www.linkedin.com/learning/programming-foundations-databases-2/why-use-a-database#:~:text=%2D%20Databases%20let%20us%20work%20with,they%20help%20us%20avoid%20redundancy. Accessed 4 Oct. 2023.
 7. “Crypto API Documentation | CoinGecko.” CoinGecko, CoinGecko, 2023, www.coingecko.com/ja/api/documentation. Accessed 3 Oct. 2023.
