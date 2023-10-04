@@ -481,11 +481,11 @@ I open user's atm csv file with pandas' function in line 4.
 Then, show option of drawing chart, deposit, withdrawal, and balance, and ask user to enter the option number and validate that number by validate_int function in line 5.
 If user choose deposit (category_choice == 1), create new dataframe, dfr, by extracting lines if "Category" colum is "deposit" from the user's atm csv file in line 11.
 I set variable x_axis value as "Date" in dfr, and variable y_axis as "Amount" in dfr in line 8 and 9.
-I set plot title, legend, x label, y label in line 12 to 15.
-In line 16, I plot line graph by using x_axis and y_axis variables.
-I rotate the xticks 30 degrees clockwise in line 17.
-I display the plot in line 18.
-If user choose withdrawal (category_choice==2) from line 21 to 31, or balance (category_choice==3) from line 30 to 40, follow the same process above.
+I set plot title, legend, x label, y label, and set y axis range as 0 to max value of deposit in line 12 to 16.
+In line 17, I plot line graph by using x_axis and y_axis variables.
+I rotate the xticks 30 degrees clockwise in line 18.
+I display the plot in line 19.
+If user choose withdrawal (category_choice==2) from line 22 to 33, or balance (category_choice==3) from line 34 to 43, follow the same process above.
 
 ```.py
 import matplotlib.pyplot as plt
@@ -499,10 +499,12 @@ if menu_option ==5:
         dfr = df[df["Category"] == "deposit"]
         x_axis = dfr.Date
         y_axis = dfr.Amount
+        plt.ylim(0, max(y_axis))
         plt.title("Deposit History")
         plt.legend("Deposit")
         plt.xlabel("Date")
         plt.ylabel("Amount")
+        plt.ylim(0, max(y_axis))
         plt.plot(x_axis, y_axis)
         plt.xticks(rotation=30)
         plt.show()
@@ -510,6 +512,7 @@ if menu_option ==5:
         dfr = df[df["Category"] == "withdrawal"]
         x_axis = dfr.Date
         y_axis = dfr.Amount
+        plt.ylim(0, max(y_axis))
         plt.title("Withdrawal History")
         plt.legend("Withdrawal")
         plt.xlabel("Date")
