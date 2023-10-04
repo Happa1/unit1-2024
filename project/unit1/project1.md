@@ -124,16 +124,43 @@ My client requires a system to protect the private data. I thought about using a
 
 As you can see in the flow diagram in **Fig3**, if the client choose a signup option in the home option (home_option==1), I defined function called try_singup, this function has three inputs of type string, and the output is a boolean representing True if the user signups correctly or False otherwise.
 This is saved in the signup_success.
+```.py
+if home_option == 1: # Sign up
+    def try_signup(signup_username:str, signup_password:str, conf_password:str)->bool:
+        signup_success=False
+```
 
 Then in line 4, I opened the users.csv file with reading mode, and set data as f.readlines().
 From line 7 to 12, I set a loop to read all lines in user.csv file to ask users to enter new username again if the username they set first has already used by other users.
 In line 8 and 9, I split each line of username as uname and password as upass.
 From line 10 to 12, I set while loop which functions if username singup_username input is in username in user.csv file.
 If signup_username is in uname, print error message, and ask users to input their new username in line 12.
+```.py
+with open('users.csv', mode='r') as f:
+            data = f.readlines()
+
+        for line in data:
+            uname = line.split(',')[0]
+            upass = line.split(',')[1].strip()  # strip() remove \n
+            while signup_username in uname:
+                print("Your username is invalid")
+                signup_username = input("Please enter your new username: ")
+
+```
+
 From line 14 to 18, I set while loop to show error if the password they enter first is different from the confirmation password.
 In line 15, if signup_password is different from conf_pasword, I print error message, and I ask to enter new password in line 16.
 If sinup_password is the same with conf_password, I break the while loop.
 In line 20,if user correctly singup by using username and pass word, I make singup_success True.
+```.py
+while signup_password != conf_password:
+            print("The password dosen't match, please enter the password again: ")
+            conf_password = input("[Error] Enter your password again: ")
+            if signup_password==conf_password:
+                break
+
+        signup_success = True
+```
 
 In line 22, if singup_success is True, I set variable line_signup, which username and password they set will be record in line splitting by comma in line23.
 Then in line 24, I opened the users.csv file as adding mode, and record line_singup.
@@ -149,12 +176,47 @@ In line 33, I set variable line_atm_2, which combines five variables that I set 
 In line 34, I open new csv file which use singup_username for the name of the file, and as writing mode.
 In line 35, I connect all values in line_atm_1 by comma, and record each value as colum of atm csv file.
 In line 36, I record line_atm_2.
+```.py
+if signup_success == True:
+            line_signup = f"{signup_username},{signup_password}\n"
+            with open('users.csv', mode='a') as f:
+                data = f.writelines(line_signup)
+
+            line_atm_1 = ["Date", "Description", "Category", "Amount", "Balance"]
+            date = datetime.date.today()  # today's date
+            description = "-----"
+            category = "-----"
+            amount = 0
+            balance = 0
+            line_atm_2 = f"{date},{description},{category},{amount},{balance}\n"
+            with open(f'atm{signup_username}.csv', mode='w') as f:
+                f.writelines(','.join(line_atm_1) + '\n')
+                f.writelines(line_atm_2)
+```
 
 If all of these signup process done by successfully, it shows the message in red color in line 38.
 In line 40, return singup_success as True, if the user can signup successfully, and end try_signup function.
 In line 42 to 44, I ask user to enter username, password, and confirmation password, and put those three inputs in the variable of signup and start try_signup function in line 45.
 In line 46, set username variable as username which used in signup to use that username in other sessions.
 After signup session ends, it moves to the home questions which asks user to choose signup or login.
+```.py
+ print( f"{red}You are successfully sign upped!{c_end}")
+
+        return(signup_success)
+
+    in_signup_username = input("Enter your username: ")
+    in_signup_password = input("Enter your password: ")
+    in_conf_password = input("[Confirmation]Enter your password again: ")
+    signup=try_signup(signup_username=in_signup_username,signup_password=in_signup_password,conf_password=in_conf_password)
+    username = in_signup_username
+    # print(signup)
+
+    print(f"1:Sign up\n2:Login")
+    username = ''
+    home_option = validate_int(msg="Please choose one, and enter the number: ", menu='', type='option')
+    while not home_option in [1, 2]:
+        home_option = validate_int(msg="[Error] Please choose one, and enter the number: ", menu='', type='option')
+```
 
 
 ```.py
@@ -218,19 +280,56 @@ My client requires a system to protect her private data, so I set sign up functi
 
 As you can see in the flow diagram **Fig4**, if the client choose a login option in the home option (home_option==2), I defined function called try_login, this function has two inputs of type string, and the output is a boolean representing True if the user logins correctly or False otherwise.
 This is saved in Login.
+```.py
+if home_option==2: #Login
+    def try_login(name:str, password:str)->bool:
+        with open('users.csv', mode='r') as f:
+            data = f.readlines()
+
+        Login = False
+```
+
 Then in line 3, I opened users.csv file as reading mode, and set vriable data as readlines().
 In line 6, I set Login as False.
 From line 7 to 12, read the users.csv file by splitting each line by comma, and set the first value as variable uname and the second value as variable upass.
 If uname is as same as username and upass is as same as password the user entered, Login becomes True and break loop of reading users.csv file.
 In line 13, return Login.
+```.py
+Login = False
+        for line in data:
+            uname = line.split(',')[0]
+            upass = line.split(',')[1].strip() #strip() remove \n
+            if uname == name and upass==password:
+                Login=True
+                break
+        return(Login)
+```
 
 From line 16, I create a system to ask user to login and if the user enter wrong password three times, the system won't accept any more login.
 I asked to enter username and password in line 17 and 18, and start try_login function by using username and password that the user just entered.
 If the password that the user enter is wrong and the number of time they make mistakes was less than three times, I ask the user to enter username and password again, and return result. Also, subtract -1 from attempts.
-
 From line 26 to 28, if the result of login ends as False, which means that the user enter wrong username or password three times, the program exit to secure users' accounts.
-In line 30, I set variable username as in_name, which is username that the user enter to login.
+```.py
+###testing
+    attempts = 3
+    in_name=input("Enter your username: ")
+    in_pass=input("Enter your password: ")
+    result= try_login(name=in_name, password=in_pass)
+    while result== False and attempts > 1:
+        in_name = input("[Error try again] Enter your username: ")
+        in_pass = input("[Error try again] Enter your password: ")
+        result = try_login(name=in_name, password=in_pass)
+        attempts -=1
 
+    if result == False:
+        print("Sayonara")
+        exit(1) #1 is the code for exit without error
+```
+
+In line 30, I set variable username as in_name, which is username that the user enter to login.
+```.py
+    username = in_name
+```
 
 ```.py
 if home_option==2: #Login
@@ -350,8 +449,47 @@ As I refer the documentation of CoinGecko, I called the url to get the price of 
 Then, if I get the data successfully from the server (response.status_code == 200), I transfer Jason data to python structure data in line 11.
 I extract the key of litecoin and usd from the data, and set it in variable ltc_price, and return the price after the function ends in line 12 and 13.
 If I fail to get the data from the server, I print error message and ends function with return None in line 14 to 16.
+```.py
+# get LTC data in dollar
+def get_ltc_price_usd():
+    url = "https://api.coingecko.com/api/v3/simple/price"
+    params = {
+        "ids": "litecoin",
+        "vs_currencies": "usd"
+    }
+
+    response = requests.get(url, params=params)
+    if response.status_code == 200:
+        data = response.json()
+        ltc_price = data["litecoin"]["usd"]
+        return ltc_price
+    else:
+        print("Failed to fetch data.")
+        return None
+
+ltc_price_usd = get_ltc_price_usd()
+```
 
 You can see the same structure for getting LTC price in Japanese yen in line 21 to 36.
+```.py
+# get LTC data in yen
+def get_ltc_price_jpy():
+    url = "https://api.coingecko.com/api/v3/simple/price"
+    params = {
+        "ids": "litecoin",
+        "vs_currencies": "jpy"
+    }
+
+    response = requests.get(url, params=params)
+    if response.status_code == 200:
+        data = response.json()
+        ltc_price = data["litecoin"]["jpy"]
+        return ltc_price
+    else:
+        print("Failed to fetch data.")
+        return None
+ltc_price_jpy = get_ltc_price_jpy()
+```
 
 **citation**
 “Crypto API Documentation | CoinGecko.” CoinGecko, CoinGecko, 2023, www.coingecko.com/ja/api/documentation. Accessed 3 Oct. 2023.
@@ -363,6 +501,26 @@ If user enter the number except 1, 2, and 3, the user will be asked again to ent
 If the user choose us dollar (currency_exchange == 1), multiply balance and the LtC value in us dollar I get, and print that value in line 46 and 47.
 I do the same process for Japanese yen which we can see it in line 48 and 49.
 If the user choose option 3, set option_bool as False and exist deposit option on line 50 and 51.
+```.py
+ltc_price_usd = get_ltc_price_usd()
+ltc_price_jpy = get_ltc_price_jpy()
+# import exchange currency function from my_lib.py
+from  my_lib import get_ltc_price_usd, get_ltc_price_jpy
+
+# after deposit or withdrawal finish successfully
+print("Check currency in exchange of\n1: USD\n2: JPY")
+currency_exchange = validate_int(msg="Choose the exchange currency: ", menu="", type="currency exchange")
+while currency_exchange not in [1,2,3]:
+           input(("[Invalid] Please enter currency exchange again:\n1: USD\n2: JPY\n3: skip this"))
+       if currency_exchange == 1:
+           exchanged_value = f"$ {balance * ltc_price_usd}"
+           print(exchanged_value)
+       elif currency_exchange == 2:
+           exchanged_value = f"¥ {balance * ltc_price_jpy}"
+           print(exchanged_value)
+       elif currency_exchange ==3:
+           option_bool=False
+```
 
 
 ```.py
@@ -479,14 +637,6 @@ In line 2, I imported pandas library as pd to read csv file.
 If user choose menu of transaction table (menu_option == 5), the program start the session of chart, in line 3.
 I open user's atm csv file with pandas' function in line 4.
 Then, show option of drawing chart, deposit, withdrawal, and balance, and ask user to enter the option number and validate that number by validate_int function in line 5.
-If user choose deposit (category_choice == 1), create new dataframe, dfr, by extracting lines if "Category" colum is "deposit" from the user's atm csv file in line 11.
-I set variable x_axis value as "Date" in dfr, and variable y_axis as "Amount" in dfr in line 8 and 9.
-I set plot title, legend, x label, y label, and set y axis range as 0 to max value of deposit in line 12 to 16.
-In line 17, I plot line graph by using x_axis and y_axis variables.
-I rotate the xticks 30 degrees clockwise in line 18.
-I display the plot in line 19.
-If user choose withdrawal (category_choice==2) from line 22 to 33, or balance (category_choice==3) from line 34 to 43, follow the same process above.
-
 ```.py
 import matplotlib.pyplot as plt
 import pandas as pd
@@ -495,7 +645,16 @@ if menu_option ==5:
     category_choice=validate_int(msg="1: Deposit\n2: Withdrawal\n3: Balance\nChoose the category that you want to see graph: ",menu='',type="category")
     while category_choice not in [1,2,3]:
         category_choice = validate_int(msg="[Invalid] Please enter category again\n1: Deposit\n2: Withdrawal\n3: Balance: ", menu="", type="category")
-    if category_choice==1:
+```
+
+If user choose deposit (category_choice == 1), create new dataframe, dfr, by extracting lines if "Category" colum is "deposit" from the user's atm csv file in line 11.
+I set variable x_axis value as "Date" in dfr, and variable y_axis as "Amount" in dfr in line 8 and 9.
+I set plot title, legend, x label, y label, and set y axis range as 0 to max value of deposit in line 12 to 16.
+In line 17, I plot line graph by using x_axis and y_axis variables.
+I rotate the xticks 30 degrees clockwise in line 18.
+I display the plot in line 19.
+```.py
+if category_choice==1:#deposit
         dfr = df[df["Category"] == "deposit"]
         x_axis = dfr.Date
         y_axis = dfr.Amount
@@ -508,7 +667,11 @@ if menu_option ==5:
         plt.plot(x_axis, y_axis)
         plt.xticks(rotation=30)
         plt.show()
-    elif category_choice==2:
+```
+
+If user choose withdrawal (category_choice==2) from line 22 to 33, or balance (category_choice==3) from line 34 to 43, follow the same process above.
+```.py
+elif category_choice==2: #withdrawal
         dfr = df[df["Category"] == "withdrawal"]
         x_axis = dfr.Date
         y_axis = dfr.Amount
@@ -520,7 +683,53 @@ if menu_option ==5:
         plt.plot(x_axis, y_axis)
         plt.xticks(rotation=30)
         plt.show()
-    elif category_choice==3:
+ elif category_choice==3:#Balance
+        dfr = df["Balance"]
+        x_axis = dfr.Date
+        y_axis = dfr.Amount
+        plt.title("Balance History")
+        plt.legend("Balance")
+        plt.xlabel("Date")
+        plt.ylabel("Amount")
+        plt.plot(x_axis, y_axis)
+        plt.xticks(rotation=30)
+        plt.show()
+```
+
+```.py
+import matplotlib.pyplot as plt
+import pandas as pd
+if menu_option ==5:
+    df = pd.read_csv(f'atm{username}.csv')
+    category_choice=validate_int(msg="1: Deposit\n2: Withdrawal\n3: Balance\nChoose the category that you want to see graph: ",menu='',type="category")
+    while category_choice not in [1,2,3]:
+        category_choice = validate_int(msg="[Invalid] Please enter category again\n1: Deposit\n2: Withdrawal\n3: Balance: ", menu="", type="category")
+    if category_choice==1: #deposit
+        dfr = df[df["Category"] == "deposit"]
+        x_axis = dfr.Date
+        y_axis = dfr.Amount
+        plt.ylim(0, max(y_axis))
+        plt.title("Deposit History")
+        plt.legend("Deposit")
+        plt.xlabel("Date")
+        plt.ylabel("Amount")
+        plt.ylim(0, max(y_axis))
+        plt.plot(x_axis, y_axis)
+        plt.xticks(rotation=30)
+        plt.show()
+    elif category_choice==2: #withdrawal
+        dfr = df[df["Category"] == "withdrawal"]
+        x_axis = dfr.Date
+        y_axis = dfr.Amount
+        plt.ylim(0, max(y_axis))
+        plt.title("Withdrawal History")
+        plt.legend("Withdrawal")
+        plt.xlabel("Date")
+        plt.ylabel("Amount")
+        plt.plot(x_axis, y_axis)
+        plt.xticks(rotation=30)
+        plt.show()
+    elif category_choice==3:#Balance
         dfr = df["Balance"]
         x_axis = dfr.Date
         y_axis = dfr.Amount
