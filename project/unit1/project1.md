@@ -50,7 +50,7 @@ I specified those structures in the success criteria below.
 4. The electronic ledger has sign up, log in, and log out system.
 5. The electronic ledger display the exchange of currency (yen and dollars).
 6. The electronic ledger display profit after user enter or withdraw cryptocurrency.
-7. The electronic ledger display the bar chart of transaction and profit.
+7. The electronic ledger display the line graph of transaction and profit.
 
 # Criteria B: Design
 
