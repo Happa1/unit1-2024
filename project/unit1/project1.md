@@ -119,7 +119,7 @@ I specified those structures in the success criteria below.
 # Criteria C: Development
 
 ## Signup System
-My client requires a system to protect the private data. I thought about using a singup system to accomplish this requrement using if condition and the open command to work with csv file.
+My client requires a system to protect the private data. I thought about using a singup system to accomplish this requrement using if condition, for loop, while loop and the open command to work with csv file.
 
 As you can see in the flow diagram in **Fig3**, if the client choose a signup option in the home option (home_option==1), I defined function called try_singup, this function has three inputs of type string, and the output is a boolean representing True if the user signups correctly or False otherwise.
 This is saved in the signup_success.
@@ -213,7 +213,8 @@ if home_option == 1: # Sign up
 ```
 
 ## Login System
-My client requires a system to protect her private data, so I set sign up function as I mentioned above. Since, we have a signup function, I thought creating login system to utilize that username and password effectively to secure a client's account.
+My client requires a system to protect her private data, so I set sign up function as I mentioned above. Since, we have a signup function, I thought creating login system to utilize that username and password effectively to secure a client's account by using if condition, for loop, while loop, and opne command csv file.
+
 As you can see in the flow diagram **Fig4**, if the client choose a login option in the home option (home_option==2), I defined function called try_login, this function has two inputs of type string, and the output is a boolean representing True if the user logins correctly or False otherwise.
 This is saved in Login.
 Then in line 3, I opened users.csv file as reading mode, and set vriable data as readlines().
@@ -297,7 +298,8 @@ if menu_option == 1:  # Deposit
 ```
 
 ## Withdrawal System
-My client requires a system to record withdrawal of cryptocurrency transaction easily. I thought about using a withdrawal system to accomplish this, using a csv file.
+My client requires a system to record withdrawal of cryptocurrency transaction easily. I thought about using a withdrawal system to accomplish this, using if condition and open command csv file.
+
 If the user choose the option withdrawal after she login (menu_option==2).
 In line 2, I set variable date, to define today's date by using imported datetime.
 In line 3, I ask user to enter the description of withdrawal to record the purpose of deposit.
@@ -329,7 +331,8 @@ In line 14, I print the balance by using balance variable to inform the user her
 ```
 
 ## Debt classification System
-My client requires a system to know her balance is whether in black or not after she deposits or withdrawals money. I thought creating debt classification system by using balance variable and if condition is suitable to accomplish this requirement.
+My client requires a system to know her balance is whether in black or not after she deposits or withdrawals money. I thought creating debt classification system by using balance variable and if condition which are suitable to accomplish this requirement.
+
 I use the variable balance and display "You're not debt", and if the balance is below 0, display "You're debt".
 ```.py
 if balance >= 0:
@@ -339,7 +342,7 @@ else:
 ```
 
 ## Exchange currency System
-My client requires exchange currency system to know how much value she has as a cryptocurrency in a real money value. I thought about using exchange currency system by getting the live price data of LTC in both dollar and yen and calculating its value.
+My client requires exchange currency system to know how much value she has as a cryptocurrency in a real money value. I thought about using exchange currency system by using function with is getting LTC price data in dollar and yen via url api and if condition.
 
 I called the function get_ltc_price_usd that gets the rate of LTC coin by using CoinGecko api in dollar.
 As I refer the documentation of CoinGecko, I called the url to get the price of cryptocurrency, and set litecoin in us dollars in params in line 3 to 7.
@@ -422,7 +425,8 @@ while currency_exchange not in [1,2,3]:
 ```
 
 ## Balance System
-My client requires the system to know the balance of her account.
+My client requires the system to know the balance of her account. I thought creating balance calculation function by using open command csv file to calculate the balance.
+
 Import pandas as pd to read to call csv file in line 1.
 Then I opened the function balance_calc, which receive the inputs dataframe and integer in line 2.
 If we call the balance_calc function, we extract the value at the last row and last colum of the table from input, and adding amount to calculate the balance in line 3 to 5.
@@ -456,7 +460,8 @@ if menu_option == 3:  # calculate balance
 ```
 
 ## Transaction table System
-My client requires to record and show her deposit and withdrawal data with clear visual. I thought creating transaction table shown in markdown style by using atm csv file which records user's deposit and withdrawal data.
+My client requires to record and show her deposit and withdrawal data with clear visual. I thought creating transaction table shown in markdown style by using open command atm csv file which records user's deposit and withdrawal data.
+
 If user choose menu of transaction table (menu_option == 4), the program start the session of transaction table, in line 1.
 I call user's atm csv file in line 2 by removing the second row of the table which is the default input, and print the data in the csv file in markdown style without index in line 3.
 ```.py
@@ -466,7 +471,8 @@ if menu_option ==4: #Transaction table
 ```
 
 ## Chart System
-My client requires a system to see her transaction history visually easy to understandable. I thought creating line graph to show user's deposit, withdrawal, and balance history by using user's atm csv file and matplotlib.pyplot.
+My client requires a system to see her transaction history visually easy to understandable. I thought creating line graph to show user's deposit, withdrawal, and balance history by using open command user's atm csv file and matplotlib.pyplot library.
+
 In line 1, I imported matplotlib.pyplot as plt to import library to draw graph.
 In line 2, I imported pandas library as pd to read csv file.
 If user choose menu of transaction table (menu_option == 5), the program start the session of chart, in line 3.
@@ -525,6 +531,7 @@ if menu_option ==5:
 
 ## Logout System
 My client requires to log out from her bank ledger to protect her account. I thought creating logout system which ends the program without error by using if condition and exit code to accomplish client's requirements.
+
 If user choose logout (menu_option == 6), I ask user that you want to log out and answer in yYnN in line 1 and 2.
 If the letter user entered is not yYnN, I ask again user to enter one of yYnN in line 3.
 If the user's choice was yes to log out, I exit from the program without any errors by exit(1) in line 8 to 11.
