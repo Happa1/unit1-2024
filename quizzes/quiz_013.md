@@ -6,6 +6,7 @@ print(out)
 |---------------------|-------------|
 | 37, 3               | 1372        |
 | 58, 2               | 3366        |
+
 ※ We didn't have a slide of this prompt.
 
 
