@@ -1,7 +1,13 @@
 # Quiz013
-![2023  Quizzes (2)](https://github.com/Happa1/unit1-2024/assets/142579414/20dbbe31-81a1-46d5-9226-f9306d7ca5c6)
+Create a function that receives one input and produces the output shown. 
+out = mystery(A=37, B=3)
+print(out)
+| Input A:int , B:int | Output :int |
+|---------------------|-------------|
+| 37, 3               | 1372        |
+| 58, 2               | 3366        |
+※ We didn't have a slide of this prompt.
 
-Fig. 1 prompt of quiz 013
 
 ## 1.flow of chart
 <img width="352" alt="Screen Shot 2023-09-20 at 9 30 57" src="https://github.com/Happa1/unit1-2024/assets/142579414/8afdb061-4767-4a40-b95f-dbab27f4d202">
