@@ -44,10 +44,12 @@ print(out)
 ```
 
 ## 3.proof of work
+### quiz 016 SL
 <img width="557" alt="Screenshot 2023-10-09 at 21 19 53" src="https://github.com/Happa1/unit1-2024/assets/142579414/159770b8-37a4-402f-9bdf-23e86367adfa">
 
 Fig. 3 test of quiz 016 SL
 
+### quiz 016 HL
 <img width="598" alt="Screenshot 2023-10-09 at 21 20 30" src="https://github.com/Happa1/unit1-2024/assets/142579414/b081d8a2-3e48-4d52-9fe5-e48eaed8a1a0">
 
 Fig. 4 test of quiz 016 HL
