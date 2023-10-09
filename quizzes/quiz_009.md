@@ -1,5 +1,6 @@
 # Quiz009
 ![2023  Quizzes](https://github.com/Happa1/unit1-2024/assets/142579414/8368c10d-23bf-4286-9c63-1fe70cc94f27)
+
 Fig. 1 prompt of quiz 009
 
 ## 1.flow of chart
@@ -70,9 +71,11 @@ print(out)
 ```
 
 ## 3.proof of work
+### 3a. proof SL
 <img width="528" alt="Screen Shot 2023-09-23 at 13 41 21" src="https://github.com/Happa1/unit1-2024/assets/142579414/879e4708-4659-4185-86d2-cb5f4ae23109">
-Fig. 3 test of quiz 009 SL 
 
+Fig. 3 test of quiz 009 SL 
+### 3b. proof HL
 <img width="623" alt="Screen Shot 2023-09-23 at 13 41 53" src="https://github.com/Happa1/unit1-2024/assets/142579414/2e6b1600-6d53-42b0-9e42-f610fb1d1ab5">
 
 Fig. 4 test of quiz 009 HL
