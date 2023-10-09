@@ -8,7 +8,8 @@ Fig. 1 prompt of quiz 010
 
 Fig. 2 algorithm flow chart of quiz 010
 
-## 2a. solution SL
+## 2. solution
+### 2a. solution SL
 ```.py
 def bestMonth (month:int):
     days=["We","Th","Fr","Sa","Su","Mo","Tu"]
@@ -29,7 +30,7 @@ out=bestMonth(11)
 print(out)
 ```
 
-## 2b. solution HL
+### 2b. solution HL
 ```.py
 # quiz 010 HL
 def bestMonth (month:int):
@@ -82,10 +83,12 @@ print(out)
 ```
 
 ## 3. proof of work
+### 3a. proof SL
 <img width="700" alt="Screen Shot 2023-09-19 at 19 44 03" src="https://github.com/Happa1/unit1-2024/assets/142579414/141b5d7d-b19f-48da-9eb6-7255ed4e2aed">
 
 Fig. 3 test of quiz 010 SL
 
+### 3b. proof HL
 <img width="700" alt="Screen Shot 2023-09-19 at 19 44 46" src="https://github.com/Happa1/unit1-2024/assets/142579414/fcb23463-6cef-4595-a7f9-b739ecfd17d9">
 
 Fig. 4 test of quiz 010 HL
