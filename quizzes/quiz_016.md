@@ -9,6 +9,7 @@ Fig. 1 prompt of quiz 016
 Fig. 2 algorithm flow chart of quiz 016
 
 ## 2.solution
+### quiz 016 SL
 ```.py
 # quiz 016 SL
 def averafeLenght(words:list)->int:
@@ -25,7 +26,7 @@ out=averafeLenght(words=["hello", "main"])
 print(out)
 ```
 
-# quiz 016 HL
+### quiz 016 HL
 ```.py
 def averafeLenght(words):
     count=len(words)
