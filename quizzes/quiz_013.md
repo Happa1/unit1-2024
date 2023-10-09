@@ -1,11 +1,6 @@
 # Quiz013
-Create a function that receives one input and produces the output shown. </br>out = mystery(A=37, B=3)</br>print(out)
-| Input A:int , B:int | Output :int |
-|---------------------|-------------|
-| 37, 3               | 1372        |
-| 58, 2               | 3366        |
-
-※ We didn't have a slide of this prompt.
+![2022  Quizzes](https://github.com/Happa1/unit1-2024/assets/142579414/4e26f40b-cec5-4773-8d35-2fb066932c82)
+Fig. 1 prompt of quiz 013
 
 
 ## 1.flow of chart
