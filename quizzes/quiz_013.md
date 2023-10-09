@@ -1,7 +1,5 @@
 # Quiz013
-Create a function that receives one input and produces the output shown. 
-out = mystery(A=37, B=3)
-print(out)
+Create a function that receives one input and produces the output shown. </br>out = mystery(A=37, B=3)</br>print(out)
 | Input A:int , B:int | Output :int |
 |---------------------|-------------|
 | 37, 3               | 1372        |
