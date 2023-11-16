@@ -40,5 +40,6 @@ print(table)
 Fig. 3 test of quiz 019
 
 ## Truth table and circuit
-![IMG_0172](https://github.com/Happa1/unit1-2024/assets/142579414/23d5100a-751e-43ab-a3ae-274de49a3f4d)
+![IMG_0173](https://github.com/Happa1/unit1-2024/assets/142579414/ee60df8e-f1dc-4ab8-9ca2-94c55ea6964f)
+
 Fig. 4 truth table and circuit of quiz 019
