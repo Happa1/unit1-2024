@@ -40,6 +40,7 @@ print(sample)
 Fig. 3 test of quiz 020
 
 ## proof
-![IMG_0173](https://github.com/Happa1/unit1-2024/assets/142579414/3039aaf4-04ce-430d-8ed0-b84aabcabeeb)
+![IMG_0174](https://github.com/Happa1/unit1-2024/assets/142579414/a90c39aa-6af1-4fc9-aac7-f6bd8a9a1beb)
+
 
 Fig. 4 proof of boolean equation of quiz 020
