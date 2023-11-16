@@ -36,3 +36,8 @@ print(table)
 <img width="246" alt="Screenshot 2023-11-16 at 20 49 54" src="https://github.com/Happa1/unit1-2024/assets/142579414/0a61e921-6896-449d-a167-813e53bb5ce4">
 
 Fig. 3 test of quiz 018
+
+## truth table
+![IMG_0172](https://github.com/Happa1/unit1-2024/assets/142579414/ed422f43-0b08-4189-85e8-1fe4c66376d2)
+
+Fig. 4 truth table of quiz 018
