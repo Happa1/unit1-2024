@@ -50,3 +50,7 @@ print(case1)
 <img width="274" alt="Screenshot 2023-11-16 at 20 06 40" src="https://github.com/Happa1/unit1-2024/assets/142579414/ceed42e6-530d-4f09-86a4-ea6f0dbad7af">
 
 Fig. 3 test of quiz 017
+
+## Boolean circuit
+![IMG_0171](https://github.com/Happa1/unit1-2024/assets/142579414/37f9aa35-2bcb-45b5-85d8-760279d34664)
+
