@@ -4,7 +4,8 @@
 Fig. 1 prompt of quiz 017
 
 ## 1.flow of chart
-![Computer Science quiz (7)](https://github.com/Happa1/unit1-2024/assets/142579414/3f4c96cf-b795-4ee5-b33c-39f6c7188d1a)
+![Computer Science quiz (8)](https://github.com/Happa1/unit1-2024/assets/142579414/de2997e1-6a9e-48a4-9fb5-cc13bffa1ab1)
+
 
 Fig. 2 algorithm flow chart of quiz 017
 
